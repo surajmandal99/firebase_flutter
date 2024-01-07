@@ -5,7 +5,9 @@
 ## Features:
 1. Authentication.
 2. DataStorage
-3. Phone Number Authentication 
+3. Phone Number Authentication
+4. Realtime Database
+5. CRED Operations
 
 
 
