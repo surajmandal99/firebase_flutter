@@ -6,7 +6,8 @@ import 'package:flutter/services.dart';
 
 import '../../../utils/utils.dart';
 import '../../../widgets/round_button.dart';
-import '../../firebase_database/posts_screen.dart';
+import '../post/post_screen.dart';
+import 'forget_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -40,8 +41,8 @@ class _LoginScreenState extends State<LoginScreen> {
             password: passwordController.text.toString())
         .then((value) {
       Utils().toastMessage(value.user!.email.toString());
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => const PostsScreen()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const PostScreen()));
       setState(() {
         loading = false;
       });
@@ -128,17 +129,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     }
                   },
                 ),
-                // Align(
-                //   alignment: Alignment.bottomRight,
-                //   child: TextButton(
-                //       onPressed: () {
-                //         Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //                 builder: (context) => ForgotPasswordScreen()));
-                //       },
-                //       child: const Text('Forgot Password?')),
-                // ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const ForgetPasswordScreen()));
+                      },
+                      child: const Text('Forgot Password?')),
+                ),
                 const SizedBox(
                   height: 30,
                 ),

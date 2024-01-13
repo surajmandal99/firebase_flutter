@@ -21,6 +21,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add Post'),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -46,7 +47,6 @@ class _AddPostScreenState extends State<AddPostScreen> {
                   //pop the nav
                   // Navigator.pop(context);
                   setState(() {
-                    // Navigator.pop(context);
                     loading = true;
                   });
 
@@ -71,6 +71,4 @@ class _AddPostScreenState extends State<AddPostScreen> {
       ),
     );
   }
-
-  }
-
+}

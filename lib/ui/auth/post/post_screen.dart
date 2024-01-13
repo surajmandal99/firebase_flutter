@@ -22,14 +22,12 @@ class _PostScreenState extends State<PostScreen> {
   var editController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    // void initState() {m
-    //   super.initState();
-    // }
-
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text("Post"),
+        title: const Text(
+          "Post",
+        ),
         actions: [
           IconButton(
               onPressed: () {
@@ -44,7 +42,7 @@ class _PostScreenState extends State<PostScreen> {
               },
               icon: const Icon(Icons.logout))
         ],
-        centerTitle: true,
+        centerTitle: false,
       ),
       body: Column(
         children: [
