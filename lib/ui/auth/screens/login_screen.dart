@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 
 import '../../../utils/utils.dart';
 import '../../../widgets/round_button.dart';
-import '../posts/post_screen.dart';
+import '../../firebase_database/posts_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -40,8 +40,8 @@ class _LoginScreenState extends State<LoginScreen> {
             password: passwordController.text.toString())
         .then((value) {
       Utils().toastMessage(value.user!.email.toString());
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const PostScreen()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const PostsScreen()));
       setState(() {
         loading = false;
       });

@@ -4,8 +4,8 @@ import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/utils.dart';
-import '../auth/posts/add_post.dart';
 import '../auth/screens/login_screen.dart';
+import 'add_posts.dart';
 
 class PostsScreen extends StatefulWidget {
   const PostsScreen({Key? key}) : super(key: key);
@@ -131,10 +131,21 @@ class _PostsScreenState extends State<PostsScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const AddPostScreen()));
+              MaterialPageRoute(builder: (context) => const AddPostsScreen()));
         },
         child: const Icon(Icons.add),
       ),
     );
   }
+
+  
+  //
+  Future<void> showMyDialog()async{
+    return showDialog(context: context, builder: (context){
+      return AlertDialog(
+        title: const Text('Update'),
+        content:Container(child: TextField(),)
+      );
+    });
+    }
 }

@@ -1,17 +1,17 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
-import '../../../utils/utils.dart';
-import '../../../widgets/round_button.dart';
+import '../../utils/utils.dart';
+import '../../widgets/round_button.dart';
 
-class AddPostScreen extends StatefulWidget {
-  const AddPostScreen({Key? key}) : super(key: key);
+class AddPostsScreen extends StatefulWidget {
+  const AddPostsScreen({Key? key}) : super(key: key);
 
   @override
-  State<AddPostScreen> createState() => _AddPostScreenState();
+  State<AddPostsScreen> createState() => _AddPostsScreenState();
 }
 
-class _AddPostScreenState extends State<AddPostScreen> {
+class _AddPostsScreenState extends State<AddPostsScreen> {
   final postController = TextEditingController();
   bool loading = false;
   final databaseRef = FirebaseDatabase.instance.ref('Post');
@@ -43,10 +43,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 title: 'Add',
                 loading: loading,
                 onTap: () {
-                  //pop the nav
-                  // Navigator.pop(context);
                   setState(() {
-                    // Navigator.pop(context);
                     loading = true;
                   });
 

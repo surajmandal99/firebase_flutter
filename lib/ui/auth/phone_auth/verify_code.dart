@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/utils.dart';
 import '../../../widgets/round_button.dart';
-import '../posts/post_screen.dart';
+import '../post/post_screen.dart';
 
 class VerifyCodeScreen extends StatefulWidget {
   final String verificationId;
