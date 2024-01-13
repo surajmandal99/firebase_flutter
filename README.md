@@ -6,8 +6,8 @@
 1. Authentication.
 2. DataStorage
 3. Phone Number Authentication
-4. Realtime Database
-5. CRED Operations
+4. Realtime DataStorage
+5. CRUD Operations
 
 
 
