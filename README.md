@@ -4,10 +4,11 @@
 
 ## Features:
 1. Authentication.
-2. DataStorage
+2. Data Storage
 3. Phone Number Authentication
 4. Realtime DataStorage
 5. CRUD Operations
+6. Forget Password
 
 
 
