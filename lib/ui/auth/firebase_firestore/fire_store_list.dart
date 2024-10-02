@@ -8,7 +8,7 @@ import '../screens/login_screen.dart';
 import 'insert_fire_store.dart';
 
 class ShowFireStorePostScreen extends StatefulWidget {
-  const ShowFireStorePostScreen({Key? key}) : super(key: key);
+  const ShowFireStorePostScreen({super.key});
 
   @override
   State<ShowFireStorePostScreen> createState() =>
@@ -25,7 +25,6 @@ class _ShowFireStorePostScreenState extends State<ShowFireStorePostScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -80,15 +79,15 @@ class _ShowFireStorePostScreenState extends State<ShowFireStorePostScreen> {
                         users
                             .doc(data['id'].toString())
                             .delete()
-                            .then((value) => print("User Updated"))
+                            .then((value) => debugPrint("User Updated"))
                             .catchError((error) =>
-                                print("Failed to update user: $error"));
+                                debugPrint("Failed to update user: $error"));
                         users
                             .doc(data['id'].toString())
                             .update({'full_name': 'Asif Taj'})
-                            .then((value) => print("User Updated"))
+                            .then((value) => debugPrint("User Updated"))
                             .catchError((error) =>
-                                print("Failed to update user: $error"));
+                                debugPrint("Failed to update user: $error"));
                       },
                     );
                   }).toList(),

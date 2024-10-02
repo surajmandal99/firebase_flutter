@@ -172,6 +172,7 @@ class _PostScreenState extends State<PostScreen> {
           return AlertDialog(
             title: const Text('Update'),
             content: Container(
+              color: Colors.transparent,
               child: TextField(
                 controller: editController,
                 decoration: const InputDecoration(hintText: "Edit"),

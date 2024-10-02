@@ -5,7 +5,7 @@ import '../../utils/utils.dart';
 import '../../widgets/round_button.dart';
 
 class AddPostsScreen extends StatefulWidget {
-  const AddPostsScreen({Key? key}) : super(key: key);
+  const AddPostsScreen({super.key});
 
   @override
   State<AddPostsScreen> createState() => _AddPostsScreenState();

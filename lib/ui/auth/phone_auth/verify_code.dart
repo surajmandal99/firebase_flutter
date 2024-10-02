@@ -7,8 +7,7 @@ import '../post/post_screen.dart';
 
 class VerifyCodeScreen extends StatefulWidget {
   final String verificationId;
-  const VerifyCodeScreen({Key? key, required this.verificationId})
-      : super(key: key);
+  const VerifyCodeScreen({super.key, required this.verificationId});
 
   @override
   State<VerifyCodeScreen> createState() => _VerifyCodeScreenState();

@@ -1,5 +1,6 @@
 import 'package:firebase_tut/firebase_services/firebase_services.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,13 +19,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-          child: Center(
-              child: Text(
-        "Splash Screen",
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-      ))),
-    );
+    return Scaffold(
+        body: Center(
+      child: Lottie.network(
+          'https://lottie.host/c9dd6181-8dd2-48a0-84fe-135fe99c6887/nDveW6SUMy.json'),
+    ));
   }
 }

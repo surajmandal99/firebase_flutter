@@ -7,7 +7,7 @@ import '../../../utils/utils.dart';
 import '../screens/login_screen.dart';
 
 class InsertFireStoreScreen extends StatefulWidget {
-  const InsertFireStoreScreen({Key? key}) : super(key: key);
+  const InsertFireStoreScreen({super.key});
 
   @override
   State<InsertFireStoreScreen> createState() => _InsertFireStoreScreenState();
@@ -21,7 +21,6 @@ class _InsertFireStoreScreenState extends State<InsertFireStoreScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
